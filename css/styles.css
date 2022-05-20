@@ -65,22 +65,23 @@ textarea {
     overflow: hidden;
 }
 
-/* 
-||=========================
-||  Header
-||========================= 
-*/
+/* Header */
 
 .header {
     border-bottom: 1px solid #ECECEC;
 }
 
-.main-nav {
+.header__section {
     display: flex;
     align-items: center;
 }
 
-.logo {
+.header__nav {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
     font-family: Raleway;
     font-weight: 700;
     font-size: 26px;
@@ -89,12 +90,8 @@ textarea {
     color: var(--accent-color);
 }
 
-.logo-black {
+.header__logo--black {
     color: var(--logo-black-color);
-}
-
-.logo-white {
-    color: var(--main-white-color);
 }
 
 /* Site nav */
@@ -104,11 +101,11 @@ textarea {
     margin-left: 93px;
 }
 
-.site-nav .item:not(:last-child) {
+.site-nav__item:not(:last-child) {
     margin-right: 50px;
 }
 
-.site-nav .link {
+.site-nav__link {
     position: relative;
 
     display: block;
@@ -125,7 +122,7 @@ textarea {
 }
 
 
-.site-nav .link.current:after {
+.site-nav__link--current:after {
     position: absolute;
 
     display: block;
@@ -139,29 +136,31 @@ textarea {
 
 }
 
-.link.current {
+.site-nav__link--current {
     color: var(--accent-color);
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus,
-.nav-contacts .link:hover,
-.nav-contacts .link:focus {
+.site-nav__link:hover,
+.site-nav__link:focus {
     color: var(--accent-color);
 }
 
 /* Nav contacts */
 
-.nav-contacts {
+.header-contacts {
     display: flex;
     margin-left: auto;
 }
 
-.nav-contacts .item + .item {
-    margin-left: 30px;
+.header-contacts__item {
+    margin-right: 30px;
 }
 
-.nav-contacts .link {
+.header-contacts__item:last-child {
+    margin-right: 0;
+}
+
+.header-contacts__link {
     display: flex;
     align-items: center;
 
@@ -174,13 +173,18 @@ textarea {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-icon {
+.header-contacts__link:hover,
+.header-contacts__link:focus {
+    color: var(--accent-color);
+}
+
+.header-contacts__icon {
     margin-right: 10px;
     fill: currentColor;
 }
 
-.header-icon:hover,
-.header-icon:focus {
+.header-contacts__icon:hover,
+.header-contacts__icon:focus {
     fill: var(--accent-color);
 }
 
@@ -615,6 +619,10 @@ textarea {
     padding-bottom: 60px;
 
     background-color: var(--bg-color);
+}
+
+.logo-white {
+    color: var(--main-white-color);
 }
 
 .footer-contacts-flex {
