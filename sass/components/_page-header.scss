@@ -1,0 +1,11 @@
+.header {
+    border-bottom: 1px solid #ECECEC;
+}
+
+.header__section {
+    @include centeredItems;
+}
+
+.header__nav {
+    @include centeredItems;
+}
