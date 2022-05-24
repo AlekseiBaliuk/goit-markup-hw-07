@@ -12,7 +12,7 @@
 }
 
 .header-contacts__link {
-  @include centeredItems;
+  @extend %centeredItems;
 
   font-weight: 500;
   font-size: 14px;

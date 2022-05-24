@@ -22,3 +22,14 @@
     background-color: var(--button-hover);
   }
 }
+
+%centeredItems {
+  display: flex;
+  align-items: center;
+}
+
+%centeredFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

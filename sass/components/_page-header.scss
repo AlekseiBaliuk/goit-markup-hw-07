@@ -1,11 +1,11 @@
 .header {
-    border-bottom: 1px solid #ECECEC;
+  border-bottom: 1px solid #ececec;
 }
 
-.header__section {
-    @include centeredItems;
+.header__container {
+  @extend %centeredItems;
 }
 
 .header__nav {
-    @include centeredItems;
+  @extend %centeredItems;
 }

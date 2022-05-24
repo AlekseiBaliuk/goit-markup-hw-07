@@ -9,12 +9,6 @@
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
-
-  &:hover .product__overlay,
-  &:focus .product__overlay {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .product__thumb {
@@ -34,6 +28,12 @@
 
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .product:hover &,
+  .product:focus & {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .product__overlay-box {
@@ -41,7 +41,7 @@
   top: 0;
   left: 0;
 
-  @include centeredItems;
+  @extend %centeredItems;
 
   width: 100%;
   height: 100%;

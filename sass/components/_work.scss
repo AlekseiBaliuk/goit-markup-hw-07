@@ -1,11 +1,3 @@
-.work {
-  padding-bottom: 94px;
-}
-
-.work__title {
-  margin-bottom: 50px;
-}
-
 .work-list {
   display: flex;
 }
@@ -25,7 +17,7 @@
   left: 0;
   bottom: 0;
 
-  @include centeredFlex;
+  @extend %centeredFlex;
   background: rgba(47, 48, 58, 0.8);
 
   font-weight: 700;
